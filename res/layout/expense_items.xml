@@ -4,28 +4,51 @@
     android:layout_height="match_parent" >
 
     <Button
-        android:id="@+id/addexpenseitembutton"
+        android:id="@+id/edititembutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Edit Item" />
+
+    <TextView
+        android:id="@+id/item_datetextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ItemstextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/item_costcurrencytextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ItemstextView"
+        android:layout_below="@+id/item_categorytextView"
+        android:layout_marginTop="60dp"
+        android:text="Cost Currency"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/item_categorytextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/edititembutton"
+        android:layout_below="@+id/item_datetextView"
+        android:layout_marginTop="63dp"
+        android:text="Category"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ItemstextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:text="Add Expense Item" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_alignLeft="@+id/addexpenseitembutton"
-        android:layout_marginBottom="34dp"
-        android:text="Edit Expense Item" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Delete Expense Item" />
+        android:layout_marginTop="62dp"
+        android:text="Expense Item"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

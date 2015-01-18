@@ -9,20 +9,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ca.ualberta.cs.olexson_travel.MainActivity" >
 
-    <Button
-        android:id="@+id/expenseitembutton"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/claimtextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Expense Item" />
+        android:text="Claims"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/claimbutton"
+    <ListView
+        android:id="@+id/claimlistView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/expenseitembutton"
-        android:layout_centerVertical="true"
-        android:text="Claims" />
+        android:layout_above="@+id/newclaimbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/claimtextView"
+        android:layout_marginTop="30dp"
+        android:contentDescription="Claim and status" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/newclaimbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/claimlistView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/claimlistView"
+        android:text="New Claim" />
 
 </RelativeLayout>
