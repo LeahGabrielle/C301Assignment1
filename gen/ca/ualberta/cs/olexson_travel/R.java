@@ -26,14 +26,17 @@ public final class R {
     }
     public static final class id {
         public static final int ItemstextView=0x7f080005;
-        public static final int action_settings=0x7f080010;
+        public static final int action_settings=0x7f080013;
         public static final int claim_editbutton=0x7f08000b;
         public static final int claim_itemlisttextView=0x7f080008;
         public static final int claimlistView=0x7f080001;
+        public static final int claimname_editfillText=0x7f080011;
+        public static final int claimname_edittextView=0x7f080010;
         public static final int claimstatustextView=0x7f08000a;
         public static final int claimtextView=0x7f080000;
         public static final int costcurrency_alltextView=0x7f08000e;
         public static final int daterangetextView=0x7f080009;
+        public static final int doneclaimbutton=0x7f080012;
         public static final int edititembutton=0x7f080003;
         public static final int emailbutton=0x7f08000d;
         public static final int item_categorytextView=0x7f080007;
@@ -47,6 +50,7 @@ public final class R {
         public static final int activity_main=0x7f030000;
         public static final int expense_items=0x7f030001;
         public static final int item_list=0x7f030002;
+        public static final int new_claim=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f070000;
