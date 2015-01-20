@@ -12,23 +12,12 @@
         android:text="Edit Item" />
 
     <TextView
-        android:id="@+id/item_datetextView"
+        android:id="@+id/ItemstextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ItemstextView"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:text="Date"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/item_costcurrencytextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ItemstextView"
-        android:layout_below="@+id/item_categorytextView"
-        android:layout_marginTop="60dp"
-        android:text="Cost Currency"
+        android:text="Expense Item"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -37,18 +26,37 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/edititembutton"
         android:layout_below="@+id/item_datetextView"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="26dp"
         android:text="Category"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/ItemstextView"
+        android:id="@+id/item_datetextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/ItemstextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
-        android:text="Expense Item"
+        android:text="Date"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/item_costcurrencytextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edititembutton"
+        android:layout_alignLeft="@+id/ItemstextView"
+        android:layout_marginBottom="77dp"
+        android:text="Cost Currency"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/descriptionitemtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_categorytextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Description"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

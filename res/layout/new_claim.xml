@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -8,6 +9,8 @@
         android:id="@+id/claimname_edittextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:text="Claim Name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -15,13 +18,39 @@
         android:id="@+id/claimname_editfillText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/claimname_edittextView"
         android:contentDescription="Claim Name"
         android:ems="10" />
+
+    <TextView
+        android:id="@+id/claimdescription_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/claimname_editfillText"
+        android:layout_marginTop="27dp"
+        android:text="Claim Description"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/claimdescription_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/claimdescription_textView"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
 
     <Button
         android:id="@+id/doneclaimbutton"
         android:layout_width="match_parent"
-        android:layout_height="122dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
         android:text="DONE" />
 
-</LinearLayout>
+</RelativeLayout>
