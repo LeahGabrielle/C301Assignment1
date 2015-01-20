@@ -25,36 +25,51 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int ItemstextView=0x7f080004;
-        public static final int RelativeLayout1=0x7f080011;
-        public static final int action_settings=0x7f080017;
-        public static final int claim_editbutton=0x7f08000c;
-        public static final int claim_itemlisttextView=0x7f080009;
-        public static final int claimdescription_editText=0x7f080015;
-        public static final int claimdescription_textView=0x7f080014;
+        public static final int ItemstextView=0x7f080005;
+        public static final int RelativeLayout1=0x7f080012;
+        public static final int action_settings=0x7f080025;
+        public static final int amounteditText=0x7f080020;
+        public static final int categoryeditText=0x7f08001d;
+        public static final int categorytextView=0x7f08001b;
+        public static final int claim_editbutton=0x7f08000d;
+        public static final int claim_itemlisttextView=0x7f08000a;
+        public static final int claimdescription_editText=0x7f080016;
+        public static final int claimdescription_textView=0x7f080015;
+        public static final int claimdescriptioninfotextView=0x7f080011;
         public static final int claimlistView=0x7f080001;
-        public static final int claimname_editfillText=0x7f080013;
-        public static final int claimname_edittextView=0x7f080012;
-        public static final int claimstatustextView=0x7f08000b;
+        public static final int claimname_editfillText=0x7f080014;
+        public static final int claimname_edittextView=0x7f080013;
+        public static final int claimstatustextView=0x7f08000c;
         public static final int claimtextView=0x7f080000;
-        public static final int costcurrency_alltextView=0x7f08000f;
-        public static final int daterangetextView=0x7f08000a;
-        public static final int descriptionitemtextView=0x7f080008;
-        public static final int doneclaimbutton=0x7f080016;
-        public static final int edititembutton=0x7f080003;
-        public static final int emailbutton=0x7f08000e;
-        public static final int item_categorytextView=0x7f080005;
-        public static final int item_costcurrencytextView=0x7f080007;
-        public static final int item_datetextView=0x7f080006;
-        public static final int listView1=0x7f080010;
+        public static final int costcurrency_alltextView=0x7f080010;
+        public static final int daterangetextView=0x7f08000b;
+        public static final int descriptionitemtextView=0x7f080009;
+        public static final int doneclaimbutton=0x7f080017;
+        public static final int donenewitembutton=0x7f080024;
+        public static final int edititembutton=0x7f080004;
+        public static final int emailbutton=0x7f08000f;
+        public static final int item_categorytextView=0x7f080006;
+        public static final int item_costcurrencytextView=0x7f080008;
+        public static final int item_datetextView=0x7f080007;
+        public static final int itemamounttextView=0x7f080021;
+        public static final int itemcurrencyeditText=0x7f080022;
+        public static final int itemcurrencytextView=0x7f080023;
+        public static final int itemdate_editText=0x7f08001e;
+        public static final int itemdatetextView=0x7f08001f;
+        public static final int itemdescription_editText=0x7f08001c;
+        public static final int itemdescription_textView=0x7f08001a;
+        public static final int itemlistView=0x7f080003;
+        public static final int itemname_editText=0x7f080019;
+        public static final int itemnametextView=0x7f080018;
         public static final int newclaimbutton=0x7f080002;
-        public static final int newitem_button=0x7f08000d;
+        public static final int newitem_button=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int expense_items=0x7f030001;
         public static final int item_list=0x7f030002;
         public static final int new_claim=0x7f030003;
+        public static final int new_item=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;

@@ -64,13 +64,22 @@
         android:text="Cost Currency"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView
+        android:id="@+id/claimdescriptioninfotextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/costcurrency_alltextView"
+        android:layout_centerHorizontal="true"
+        android:text="Claim Description"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/itemlistView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/claim_editbutton"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/costcurrency_alltextView" >
+        android:layout_below="@+id/claimdescriptioninfotextView" >
 
     </ListView>
 
