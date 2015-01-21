@@ -37,15 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:text="Edit" />
-
-    <Button
-        android:id="@+id/newitem_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="New Item" />
+        android:text="Edit Claim" />
 
     <Button
         android:id="@+id/emailbutton"
@@ -53,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/newitem_button"
         android:text="Email" />
 
     <TextView
@@ -82,5 +75,13 @@
         android:layout_below="@+id/claimdescriptioninfotextView" >
 
     </ListView>
+
+    <Button
+        android:id="@+id/newitem_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="New Item" />
 
 </RelativeLayout>
