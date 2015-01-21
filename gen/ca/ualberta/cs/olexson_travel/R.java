@@ -47,7 +47,7 @@ public final class R {
         public static final int doneclaimbutton=0x7f080017;
         public static final int donenewitembutton=0x7f080024;
         public static final int edititembutton=0x7f080003;
-        public static final int emailbutton=0x7f08000e;
+        public static final int emailbutton=0x7f08000d;
         public static final int item_categorytextView=0x7f080005;
         public static final int item_costcurrencytextView=0x7f080007;
         public static final int item_datetextView=0x7f080006;
@@ -62,7 +62,7 @@ public final class R {
         public static final int itemname_editText=0x7f080019;
         public static final int itemnametextView=0x7f080018;
         public static final int newclaimbutton=0x7f080002;
-        public static final int newitem_button=0x7f08000d;
+        public static final int newitem_button=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
