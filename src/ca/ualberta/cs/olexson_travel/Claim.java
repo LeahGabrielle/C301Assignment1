@@ -5,7 +5,7 @@ package ca.ualberta.cs.olexson_travel;
 public class Claim {
 	
 	//Claim has an ItemList inside.??
-	public String name;
+	public String name; //make private?
 	public String description;
 	public String status;
 	
