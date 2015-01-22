@@ -4,7 +4,7 @@ package ca.ualberta.cs.olexson_travel;
 
 public class Claim {
 	
-	//Claim has an ItemList inside.
+	//Claim has an ItemList inside.??
 	public String name;
 	public String description;
 	public String status;
@@ -12,9 +12,11 @@ public class Claim {
 	public Claim(){
 		super();
 	}
-	public Claim( String name) {
+	public Claim(String name, String description, String status) {
 		super();
 		this.name = name;
+		this.description = description;
+		this.status = status;
 	}	
 	
 	public String getDescription() {

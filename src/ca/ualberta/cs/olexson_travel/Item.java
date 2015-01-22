@@ -1,5 +1,11 @@
 package ca.ualberta.cs.olexson_travel;
 
-public class Item {
+import java.sql.Date;
 
+public class Item {
+	public String name;
+	public String Description;
+	public String Category;
+	public Date date;
+	
 }
