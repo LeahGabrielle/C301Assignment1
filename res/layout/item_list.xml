@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Claim"
+        android:text="Claim*"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -17,8 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/claim_itemlisttextView"
-        android:layout_toLeftOf="@+id/claim_itemlisttextView"
-        android:text="Date Range"
+        android:layout_toStartOf="@+id/claim_itemlisttextView"
+        android:text="Date Range*"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -27,8 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/daterangetextView"
         android:layout_alignBottom="@+id/daterangetextView"
-        android:layout_toRightOf="@+id/claim_itemlisttextView"
-        android:text="Status"
+        android:layout_toEndOf="@+id/claim_itemlisttextView"
+        android:text="Status*"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
@@ -36,17 +36,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Edit Claim" />
+        android:layout_alignParentStart="true"
+        android:text="@string/edit_claim" />
 
     <Button
         android:id="@+id/emailbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/newitem_button"
-        android:text="Email" />
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/newitem_button"
+        android:text="@string/email" />
 
     <TextView
         android:id="@+id/costcurrency_alltextView"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/daterangetextView"
         android:layout_centerHorizontal="true"
-        android:text="Cost Currency"
+        android:text="Cost Currency*"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/costcurrency_alltextView"
         android:layout_centerHorizontal="true"
-        android:text="Claim Description"
+        android:text="Claim Description*"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ListView
@@ -71,7 +71,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/claim_editbutton"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/claimdescriptioninfotextView" >
 
     </ListView>
@@ -82,6 +82,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="New Item" />
+        android:text="@string/new_item" />
 
 </RelativeLayout>

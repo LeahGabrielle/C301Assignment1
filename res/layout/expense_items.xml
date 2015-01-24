@@ -9,7 +9,38 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Edit Item" />
+        android:text="@string/edit_item" />
+
+    <TextView
+        android:id="@+id/item_costcurrencytextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edititembutton"
+        android:layout_alignEnd="@+id/item_datetextView"
+        android:layout_alignStart="@+id/item_datetextView"
+        android:layout_marginBottom="76dp"
+        android:text="@string/cost"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/descriptionitemtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/item_costcurrencytextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:text="@string/description"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/item_categorytextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/descriptionitemtextView"
+        android:layout_alignStart="@+id/edititembutton"
+        android:layout_marginBottom="56dp"
+        android:text="@string/category"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/ItemstextView"
@@ -17,17 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Expense Item"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/item_categorytextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/edititembutton"
-        android:layout_below="@+id/item_datetextView"
         android:layout_marginTop="26dp"
-        android:text="Category"
+        android:text="Expense Item*"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -36,27 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ItemstextView"
         android:layout_centerHorizontal="true"
-        android:text="Date"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/item_costcurrencytextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/edititembutton"
-        android:layout_alignLeft="@+id/ItemstextView"
-        android:layout_marginBottom="77dp"
-        android:text="Cost Currency"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/descriptionitemtextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/item_categorytextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:text="Description"
+        android:text="Date*"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

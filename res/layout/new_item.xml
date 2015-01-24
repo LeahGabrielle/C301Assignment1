@@ -9,17 +9,17 @@
         android:id="@+id/itemnametextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="Item Name"
+        android:text="@string/item_name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/itemname_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/itemnametextView"
         android:ems="10" >
 
@@ -30,26 +30,26 @@
         android:id="@+id/itemdescription_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/itemname_editText"
-        android:text="Item Description"
+        android:text="@string/item_description"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/categorytextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/itemdescription_editText"
-        android:text="Category"
+        android:text="@string/category"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/itemdescription_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/itemdescription_textView"
         android:ems="10"
         android:inputType="textMultiLine" />
@@ -58,8 +58,8 @@
         android:id="@+id/categoryeditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/categorytextView"
         android:ems="10" />
 
@@ -67,8 +67,8 @@
         android:id="@+id/itemdate_editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/itemdatetextView"
         android:ems="10"
         android:inputType="date" />
@@ -77,17 +77,17 @@
         android:id="@+id/itemdatetextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/categoryeditText"
-        android:text="Date"
+        android:text="@string/date"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/amounteditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/itemdescription_textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/itemdescription_textView"
         android:layout_below="@+id/itemamounttextView"
         android:ems="10"
         android:inputType="numberDecimal" />
@@ -98,8 +98,8 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/amounteditText"
         android:layout_alignBottom="@+id/amounteditText"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/amounteditText"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/amounteditText"
         android:ems="10" />
 
     <TextView
@@ -107,8 +107,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/itemcurrencyeditText"
-        android:layout_alignLeft="@+id/itemcurrencyeditText"
-        android:text="Currency"
+        android:layout_alignStart="@+id/itemcurrencyeditText"
+        android:text="@string/currency"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
@@ -116,16 +116,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="Done" />
+        android:layout_alignParentEnd="true"
+        android:text="@string/done" />
 
     <TextView
         android:id="@+id/itemamounttextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/itemnametextView"
+        android:layout_alignEnd="@+id/itemnametextView"
         android:layout_below="@+id/itemdate_editText"
-        android:text="Amount"
+        android:text="@string/amount"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

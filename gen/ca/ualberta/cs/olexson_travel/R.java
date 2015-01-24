@@ -25,7 +25,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int ItemstextView=0x7f080004;
+        public static final int ItemstextView=0x7f080008;
         public static final int RelativeLayout1=0x7f080012;
         public static final int action_settings=0x7f080025;
         public static final int amounteditText=0x7f080020;
@@ -43,14 +43,14 @@ public final class R {
         public static final int claimtextView=0x7f080000;
         public static final int costcurrency_alltextView=0x7f08000f;
         public static final int daterangetextView=0x7f08000a;
-        public static final int descriptionitemtextView=0x7f080008;
+        public static final int descriptionitemtextView=0x7f080006;
         public static final int doneclaimbutton=0x7f080017;
         public static final int donenewitembutton=0x7f080024;
         public static final int edititembutton=0x7f080003;
         public static final int emailbutton=0x7f08000d;
-        public static final int item_categorytextView=0x7f080005;
-        public static final int item_costcurrencytextView=0x7f080007;
-        public static final int item_datetextView=0x7f080006;
+        public static final int item_categorytextView=0x7f080007;
+        public static final int item_costcurrencytextView=0x7f080004;
+        public static final int item_datetextView=0x7f080005;
         public static final int itemamounttextView=0x7f080021;
         public static final int itemcurrencyeditText=0x7f080022;
         public static final int itemcurrencytextView=0x7f080023;
@@ -76,8 +76,26 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
+        public static final int amount=0x7f050013;
         public static final int app_name=0x7f050000;
+        public static final int category=0x7f050005;
+        public static final int claim=0x7f050003;
+        public static final int claim_description=0x7f05000e;
+        public static final int claim_name=0x7f05000d;
+        public static final int cost=0x7f050006;
+        public static final int currency=0x7f050014;
+        public static final int date=0x7f050011;
+        public static final int description=0x7f050012;
+        public static final int done=0x7f05000f;
+        public static final int edit_claim=0x7f05000c;
+        public static final int edit_item=0x7f050009;
+        public static final int email=0x7f05000b;
+        public static final int expense_item=0x7f050008;
         public static final int hello_world=0x7f050001;
+        public static final int item_description=0x7f050007;
+        public static final int item_name=0x7f050010;
+        public static final int new_claim=0x7f050004;
+        public static final int new_item=0x7f05000a;
     }
     public static final class style {
         /** 

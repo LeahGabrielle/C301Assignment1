@@ -15,10 +15,12 @@ public class ClaimList {
 		super();
 	}
 	//Claims should be ordered by date (here?)
+	//add a claim to the list of claims
 	public ArrayList <Claim> addClaim(Claim claim){
 		this.claims.add(claim);
 		return this.claims;
 	}
+	//delete a claim from the list of claims
 	public ArrayList<Claim> deleteClaim(Claim claim){
 		this.claims.remove(claim);
 		return this.claims;
