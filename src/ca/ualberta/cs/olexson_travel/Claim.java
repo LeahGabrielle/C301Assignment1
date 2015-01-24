@@ -1,13 +1,13 @@
 package ca.ualberta.cs.olexson_travel;
 
-//import java.util.Collection;
+import java.util.ArrayList;
 
 public class Claim {
 	
-	//Claim has an ItemList inside.??
-	public String name; //make private?
-	public String description;
-	public String status;
+	private ArrayList<ItemList> items;
+	private String name;
+	private String description;
+	private String status;
 	
 	public Claim(){
 		super();

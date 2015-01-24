@@ -1,13 +1,13 @@
 package ca.ualberta.cs.olexson_travel;
 
-import java.util.Collection;
+import java.util.ArrayList;
 
 public class ItemList {
-	Collection <Item> items;
+	ArrayList <Item> items;
 	//add item to items
 	//delete item from items
 
-	public ItemList(Collection<Item> items) {
+	public ItemList(ArrayList<Item> items) {
 		super();
 		this.items = items;
 	}
