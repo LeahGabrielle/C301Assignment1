@@ -20,7 +20,7 @@ public class ClaimList {
 		return this.claims;
 	}
 	public ArrayList<Claim> deleteClaim(Claim claim){
-		
+		this.claims.remove(claim);
 		return this.claims;
 	}
 }
