@@ -1,9 +1,11 @@
 package ca.ualberta.cs.olexson_travel;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class NewClaimActivity extends Activity {
 
@@ -30,5 +32,9 @@ public class NewClaimActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	public void claimDone(View view){
+    	Intent intent = new Intent(NewClaimActivity.this,MainActivity.class);
+    	startActivity(intent);
 	}
 }

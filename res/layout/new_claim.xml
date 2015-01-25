@@ -55,6 +55,7 @@
         android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:onClick="claimDone"
         android:text="@string/done" />
 
 </RelativeLayout>
