@@ -38,6 +38,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:fontFamily="@string/new_claim"
+        android:onClick="newClaim"
         android:text="@string/new_claim" />
 
 </RelativeLayout>
