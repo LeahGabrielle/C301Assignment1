@@ -52,10 +52,69 @@
     <Button
         android:id="@+id/doneclaimbutton"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:onClick="claimDone"
+        android:onClick="addClaimAction"
         android:text="@string/done" />
+
+    <TextView
+        android:id="@+id/status_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/claimdescription_editText"
+        android:layout_below="@+id/claimdescription_editText"
+        android:layout_marginTop="22dp"
+        android:text="@string/claim_status"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/status_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/status_textView"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/daterangeStringtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/status_editText"
+        android:layout_below="@+id/status_editText"
+        android:layout_marginTop="20dp"
+        android:text="@string/date_range"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/daterange1editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/doneclaimbutton"
+        android:layout_alignStart="@+id/doneclaimbutton"
+        android:layout_alignEnd="@+id/claimname_edittextView"
+        android:ems="10"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/daterange2editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/doneclaimbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/claimdescription_textView"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/totextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/daterange1editText"
+        android:layout_alignBottom="@+id/daterange1editText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/to"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

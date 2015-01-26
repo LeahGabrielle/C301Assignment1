@@ -26,11 +26,11 @@ public final class R {
     }
     public static final class id {
         public static final int ItemstextView=0x7f080008;
-        public static final int RelativeLayout1=0x7f080017;
-        public static final int action_settings=0x7f080025;
-        public static final int amounteditText=0x7f080020;
-        public static final int categoryeditText=0x7f08001d;
-        public static final int categorytextView=0x7f08001b;
+        public static final int RelativeLayout1=0x7f08001c;
+        public static final int action_settings=0x7f08002a;
+        public static final int amounteditText=0x7f080025;
+        public static final int categoryeditText=0x7f080022;
+        public static final int categorytextView=0x7f080020;
         public static final int claim_editbutton=0x7f08000c;
         public static final int claim_itemlisttextView=0x7f080009;
         public static final int claimdescription_editText=0x7f080015;
@@ -42,27 +42,32 @@ public final class R {
         public static final int claimstatustextView=0x7f08000b;
         public static final int claimtextView=0x7f080000;
         public static final int costcurrency_alltextView=0x7f08000f;
-        public static final int daterangetextView=0x7f08000a;
+        public static final int daterange1editText=0x7f080019;
+        public static final int daterange2editText=0x7f08001a;
+        public static final int daterangeStringtextView=0x7f08000a;
         public static final int descriptionitemtextView=0x7f080006;
         public static final int doneclaimbutton=0x7f080016;
-        public static final int donenewitembutton=0x7f080024;
+        public static final int donenewitembutton=0x7f080029;
         public static final int edititembutton=0x7f080003;
         public static final int emailbutton=0x7f08000d;
         public static final int item_categorytextView=0x7f080007;
         public static final int item_costcurrencytextView=0x7f080004;
         public static final int item_datetextView=0x7f080005;
-        public static final int itemamounttextView=0x7f080021;
-        public static final int itemcurrencyeditText=0x7f080022;
-        public static final int itemcurrencytextView=0x7f080023;
-        public static final int itemdate_editText=0x7f08001e;
-        public static final int itemdatetextView=0x7f08001f;
-        public static final int itemdescription_editText=0x7f08001c;
-        public static final int itemdescription_textView=0x7f08001a;
+        public static final int itemamounttextView=0x7f080026;
+        public static final int itemcurrencyeditText=0x7f080027;
+        public static final int itemcurrencytextView=0x7f080028;
+        public static final int itemdate_editText=0x7f080023;
+        public static final int itemdatetextView=0x7f080024;
+        public static final int itemdescription_editText=0x7f080021;
+        public static final int itemdescription_textView=0x7f08001f;
         public static final int itemlistView=0x7f080011;
-        public static final int itemname_editText=0x7f080019;
-        public static final int itemnametextView=0x7f080018;
+        public static final int itemname_editText=0x7f08001e;
+        public static final int itemnametextView=0x7f08001d;
         public static final int newclaimbutton=0x7f080002;
         public static final int newitem_button=0x7f08000e;
+        public static final int status_editText=0x7f080018;
+        public static final int status_textView=0x7f080017;
+        public static final int totextView=0x7f08001b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -84,9 +89,11 @@ public final class R {
         public static final int claim=0x7f050003;
         public static final int claim_description=0x7f05000e;
         public static final int claim_name=0x7f05000d;
+        public static final int claim_status=0x7f050017;
         public static final int cost=0x7f050006;
         public static final int currency=0x7f050014;
         public static final int date=0x7f050011;
+        public static final int date_range=0x7f050018;
         public static final int description=0x7f050012;
         public static final int done=0x7f05000f;
         public static final int edit_claim=0x7f05000c;
@@ -100,6 +107,7 @@ public final class R {
         public static final int new_item=0x7f05000a;
         public static final int title_activity_item_list=0x7f050016;
         public static final int title_activity_new_claim=0x7f050015;
+        public static final int to=0x7f050019;
     }
     public static final class style {
         /** 

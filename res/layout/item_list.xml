@@ -19,7 +19,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/daterangetextView"
+        android:id="@+id/daterangeStringtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/claim_itemlisttextView"
@@ -31,8 +31,8 @@
         android:id="@+id/claimstatustextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/daterangetextView"
-        android:layout_alignBottom="@+id/daterangetextView"
+        android:layout_alignBaseline="@+id/daterangeStringtextView"
+        android:layout_alignBottom="@+id/daterangeStringtextView"
         android:layout_toEndOf="@+id/claim_itemlisttextView"
         android:text="Status*"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -58,7 +58,7 @@
         android:id="@+id/costcurrency_alltextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/daterangetextView"
+        android:layout_below="@+id/daterangeStringtextView"
         android:layout_centerHorizontal="true"
         android:text="Cost Currency*"
         android:textAppearance="?android:attr/textAppearanceLarge" />

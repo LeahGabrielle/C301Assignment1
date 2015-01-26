@@ -17,6 +17,9 @@ public class ClaimList {
 	//Claims should be ordered by date (here?)
 	//add a claim to the list of claims
 	public ArrayList <Claim> addClaim(Claim claim){
+		if (this.claims==null){
+			this.claims= new ArrayList <Claim>();
+		}
 		this.claims.add(claim);
 		return this.claims;
 	}

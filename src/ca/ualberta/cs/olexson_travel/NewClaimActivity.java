@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class NewClaimActivity extends Activity {
 
@@ -33,7 +35,14 @@ public class NewClaimActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	public void claimDone(View view){
+	public void addClaimAction(View view){
+		Toast.makeText(this,"adding a claim",Toast.LENGTH_SHORT).show();
+		EditText editname=(EditText) findViewById(R.id.claimname_editfillText);
+		EditText editdescription=(EditText) findViewById(R.id.claimdescription_editText);
+		EditText editstatus=(EditText) findViewById(R.id.status_editText);
+		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString());
+		ClaimList claimlist = new ClaimList();
+		claimlist.addClaim(claim);	
     	Intent intent = new Intent(NewClaimActivity.this,MainActivity.class);
     	startActivity(intent);
 	}
