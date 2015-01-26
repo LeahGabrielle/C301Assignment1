@@ -72,8 +72,9 @@ public final class R {
         public static final int new_item=0x7f030004;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
-        public static final int new_claim=0x7f070001;
+        public static final int item_list=0x7f070000;
+        public static final int main=0x7f070001;
+        public static final int new_claim=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -97,6 +98,7 @@ public final class R {
         public static final int item_name=0x7f050010;
         public static final int new_claim=0x7f050004;
         public static final int new_item=0x7f05000a;
+        public static final int title_activity_item_list=0x7f050016;
         public static final int title_activity_new_claim=0x7f050015;
     }
     public static final class style {

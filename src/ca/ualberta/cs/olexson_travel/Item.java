@@ -7,16 +7,24 @@ public class Item {
 	private String description;
 	private String category;
 	private Date date;
+	private AmountCurrency amountcurrency;
 	
-	public Item(String name, String description, String category, Date date) {
+	public Item(String name, String description, String category, Date date, AmountCurrency amountcurrency) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.category = category;
 		this.date = date;
+		this.amountcurrency=amountcurrency;
 	}
 	public Item(){
 		super();
+	}
+	public AmountCurrency getAmountcurrency() {
+		return amountcurrency;
+	}
+	public void setAmountcurrency(AmountCurrency amountcurrency) {
+		this.amountcurrency = amountcurrency;
 	}
 	public String getName() {
 		return name;

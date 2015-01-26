@@ -6,10 +6,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
+	
+	public ListView claimList;
+	//private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,7 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -41,4 +47,9 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(MainActivity.this,NewClaimActivity.class);
     	startActivity(intent);
     }
+    /*
+    public void onListItemClick(ListView listview, View view){
+    	//nothing in list yet
+    	Toast.makeText(this,"claim clicked",Toast.LENGTH_SHORT).show();
+    } */
 }

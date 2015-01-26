@@ -26,6 +26,10 @@
             android:name=".NewClaimActivity"
             android:label="@string/title_activity_new_claim" >
         </activity>
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/title_activity_item_list" >
+        </activity>
     </application>
 
 </manifest>
