@@ -1,11 +1,14 @@
 package ca.ualberta.cs.olexson_travel;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -19,6 +22,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ListView listview= (ListView)findViewById(R.id.claimlistView);
+        //ArrayList<String> claimlist= new ClaimList().getClaimNames();
+        //ArrayList<String> claimnamelist = new ArrayList<String>();
+        
+        //put names of claims as an arraylist of strings
+        //ArrayAdapter<String>claimAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, claimlist);
+        //listview.setAdapter(claimAdapter);
+
     }
 
 

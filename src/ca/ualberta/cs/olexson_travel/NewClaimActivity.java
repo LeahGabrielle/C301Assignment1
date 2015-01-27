@@ -1,7 +1,7 @@
 package ca.ualberta.cs.olexson_travel;
 
 import android.app.Activity;
-import android.content.Intent;
+//import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,6 +35,7 @@ public class NewClaimActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	//adds claim to ClaimList
 	public void addClaimAction(View view){
 		Toast.makeText(this,"adding a claim",Toast.LENGTH_SHORT).show();
 		EditText editname=(EditText) findViewById(R.id.claimname_editfillText);
@@ -43,7 +44,7 @@ public class NewClaimActivity extends Activity {
 		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString());
 		ClaimList claimlist = new ClaimList();
 		claimlist.addClaim(claim);	
-    	Intent intent = new Intent(NewClaimActivity.this,MainActivity.class);
-    	startActivity(intent);
+    	//Intent intent = new Intent(NewClaimActivity.this,MainActivity.class);
+    	//startActivity(intent);
 	}
 }

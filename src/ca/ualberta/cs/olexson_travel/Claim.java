@@ -8,6 +8,8 @@ public class Claim {
 	private String name;
 	private String description;
 	private String status;
+	//private Date startDate;
+	//private Date endDate;
 	
 	public Claim(){
 		super();
