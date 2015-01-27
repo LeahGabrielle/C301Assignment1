@@ -23,12 +23,12 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ListView listview= (ListView)findViewById(R.id.claimlistView);
-        //ArrayList<String> claimlist= new ClaimList().getClaimNames();
+        ArrayList<String> claimnamelist= new ClaimList().getClaimNames();
         //ArrayList<String> claimnamelist = new ArrayList<String>();
         
         //put names of claims as an arraylist of strings
-        //ArrayAdapter<String>claimAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, claimlist);
-        //listview.setAdapter(claimAdapter);
+        ArrayAdapter<String>claimAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, claimnamelist);
+        listview.setAdapter(claimAdapter);
 
     }
 
