@@ -35,9 +35,7 @@ public class ClaimListController {
 			throw new RuntimeException("Could not deserialize ClaimList from ClaimListManager");
 		}
 	}
-	public Claim chooseClaim() throws EmptyClaimListException {
-		return getClaimList().chooseClaim();
-	}
+
 	public void addClaim(Claim claim) {
 		getClaimList().addClaim(claim);
 	}

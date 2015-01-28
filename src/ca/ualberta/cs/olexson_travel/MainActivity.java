@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
         final ArrayAdapter<Claim>claimAdapter = new ArrayAdapter<Claim>(this, android.R.layout.simple_list_item_1,list);
         listview.setAdapter(claimAdapter);
 
-    }
 
     ClaimListController.getClaimList().addListener(new Listener(){ 
     	@Override
@@ -42,7 +41,7 @@ public class MainActivity extends Activity {
     		list.addAll(claims);
     		claimAdapter.notifyDataSetChanged();
     	}
-    });
+    	});
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
