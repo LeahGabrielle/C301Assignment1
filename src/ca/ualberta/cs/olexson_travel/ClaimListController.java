@@ -9,7 +9,7 @@ public class ClaimListController {
 	static public ClaimList getClaimList() {
 		if (claimlist ==null){
 			try{
-				claimlist = ClaimListManager.getManager().loadClaimlist();
+				claimlist = ClaimListManager.getManager().loadClaimList();
 				claimlist.addListener(new Listener() {
 					@Override
 					public void update(){
