@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
-	public ListView claimList;
+	//public ListView claimList;
 	//private ArrayAdapter<String> adapter;
 
     @Override
@@ -31,17 +31,18 @@ public class MainActivity extends Activity {
         //put names of claims as an arraylist of strings??
         final ArrayAdapter<Claim>claimAdapter = new ArrayAdapter<Claim>(this, android.R.layout.simple_list_item_1,list);
         listview.setAdapter(claimAdapter);
+ 
 
-
-    ClaimListController.getClaimList().addListener(new Listener(){ 
-    	@Override
-    	public void update(){
-    		list.clear();
-    		ArrayList<Claim> claims = ClaimListController.getClaimList().getClaims();
-    		list.addAll(claims);
-    		claimAdapter.notifyDataSetChanged();
-    	}
-    	});
+        ClaimListController.getClaimList().addListener(new Listener(){ 
+        	@Override
+        	public void update(){
+        		list.clear();
+        		ArrayList<Claim> claims = ClaimListController.getClaimList().getClaims();
+        		list.addAll(claims);
+        		claimAdapter.notifyDataSetChanged();
+        	}
+        });
+    }
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -67,9 +68,4 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(MainActivity.this,NewClaimActivity.class);
     	startActivity(intent);
     }
-    /*
-    public void onListItemClick(ListView listview, View view){
-    	//nothing in list yet
-    	Toast.makeText(this,"claim clicked",Toast.LENGTH_SHORT).show();
-    } */
 }

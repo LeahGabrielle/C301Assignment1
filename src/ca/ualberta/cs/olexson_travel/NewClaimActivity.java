@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class NewClaimActivity extends Activity {
@@ -38,12 +39,14 @@ public class NewClaimActivity extends Activity {
 	//adds claim to ClaimList
 	public void addClaimAction(View view){
 		Toast.makeText(this,"adding a claim",Toast.LENGTH_SHORT).show();
+		ClaimListController c = new ClaimListController();
 		EditText editname=(EditText) findViewById(R.id.claimname_editfillText);
 		EditText editdescription=(EditText) findViewById(R.id.claimdescription_editText);
 		EditText editstatus=(EditText) findViewById(R.id.status_editText);
-		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString());
-		ClaimList claimlist = new ClaimList();
-		claimlist.addClaim(claim);	
+		//Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString());
+		//ClaimList claimlist = new ClaimList();
+		//claimlist.addClaim(claim);	
+		c.addClaim(new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString()));
     	//Intent intent = new Intent(NewClaimActivity.this,MainActivity.class);
     	//startActivity(intent);
 	}

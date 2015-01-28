@@ -33,13 +33,9 @@ public class ClaimList {
 	
 	//Claims should be ordered by date (here?)
 	//add a claim to the list of claims
-	public ArrayList <Claim> addClaim(Claim claim){
-		if (this.claims==null){
-			this.claims= new ArrayList <Claim>();
-		}
-		this.claims.add(claim);
+	public void addClaim(Claim claim){
+		claims.add(claim);
 		notifyListeners();
-		return this.claims;
 	}
 	private void notifyListeners() {
 		for (Listener listener:getListeners()){
