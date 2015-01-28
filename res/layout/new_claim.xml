@@ -26,6 +26,7 @@
         android:layout_below="@+id/claimname_edittextView"
 
         android:ems="10" />
+           <requestFocus />
 
     <TextView
         android:id="@+id/claimdescription_textView"
@@ -46,7 +47,6 @@
         android:ems="10"
         android:inputType="textMultiLine" >
 
-        <requestFocus />
     </EditText>
 
     <Button
