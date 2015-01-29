@@ -43,10 +43,11 @@ public class NewClaimActivity extends Activity {
 		EditText editname=(EditText) findViewById(R.id.claimname_editfillText);
 		EditText editdescription=(EditText) findViewById(R.id.claimdescription_editText);
 		EditText editstatus=(EditText) findViewById(R.id.status_editText);
-		//Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString());
+		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString());
 		//ClaimList claimlist = new ClaimList();
-		//claimlist.addClaim(claim);	
-		c.addClaim(new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString()));
+		//claimlist.addClaim(claim);
+		c.addClaim(claim);
+		//Toast.makeText(this, claim.getName(), Toast.LENGTH_SHORT).show();
     	//Intent intent = new Intent(NewClaimActivity.this,MainActivity.class);
     	//startActivity(intent);
 	}
