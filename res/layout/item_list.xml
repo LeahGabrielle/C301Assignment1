@@ -38,14 +38,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/claim_editbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:text="@string/edit_claim" />
-
-    <Button
         android:id="@+id/emailbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,11 +75,23 @@
     </ListView>
 
     <Button
+        android:id="@+id/claim_editbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/newitem_button"
+        android:layout_alignBottom="@+id/newitem_button"
+        android:layout_alignLeft="@+id/itemlistView"
+        android:layout_alignParentStart="true"
+        android:text="@string/edit_claim" />
+
+    <Button
         android:id="@+id/newitem_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignBaseline="@+id/emailbutton"
+        android:layout_alignBottom="@+id/emailbutton"
+        android:layout_toRightOf="@+id/claim_editbutton"
+        android:onClick="newItem"
         android:text="@string/new_item" />
 
 </RelativeLayout>

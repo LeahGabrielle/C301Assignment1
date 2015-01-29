@@ -2,7 +2,10 @@ package ca.ualberta.cs.olexson_travel;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Toast;
 
 public class ItemListActivity extends Activity {
 
@@ -18,5 +21,9 @@ public class ItemListActivity extends Activity {
 		getMenuInflater().inflate(R.menu.item_list, menu);
 		return true;
 	}
-
+    public void newItem(View view){
+    	Toast.makeText(this,"new Item",Toast.LENGTH_SHORT).show();
+    	Intent intent = new Intent(ItemListActivity.this,NewItemActivity.class);
+    	startActivity(intent);
+    }
 }

@@ -27,5 +27,6 @@
     <string name="claim_status">Status</string>
     <string name="date_range">Date Range</string>
     <string name="to">to</string>
+    <string name="title_activity_new_item">NewItemActivity</string>
 
 </resources>
