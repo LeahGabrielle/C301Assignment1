@@ -3,6 +3,9 @@ package ca.ualberta.cs.olexson_travel;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -47,6 +51,30 @@ public class MainActivity extends Activity {
         	public void onItemClick(AdapterView<?>parent,View view, int position, long id){
         		Intent intent= new Intent(MainActivity.this,ItemListActivity.class);
         		startActivity(intent);
+        	}
+        });
+        
+        listview.setOnItemLongClickListener(new OnItemLongClickListener(){
+        	@Override
+        	public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id){
+        		AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+        		adb.setMessage("Delete "+list.get(position).toString()+"?");
+        		adb.setCancelable(true);
+        		final int finalPosition = position;
+        		adb.setPositiveButton("Delete", new OnClickListener(){
+        			@Override
+        			public void onClick(DialogInterface dialog, int which){
+        				Claim claim = list.get(finalPosition);
+        				ClaimListController.getClaimList().deleteClaim(claim);
+        			}
+        		});
+        		adb.setNegativeButton("Cancel",new OnClickListener(){
+        			@Override
+        			public void onClick(DialogInterface dialog, int which){
+        			}
+        		});
+        		adb.show();
+        		return false;
         	}
         });
     }
