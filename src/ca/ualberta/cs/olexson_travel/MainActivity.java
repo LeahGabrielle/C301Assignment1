@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -15,8 +17,6 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 	
-	//public ListView claimList;
-	//private ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class MainActivity extends Activity {
         ListView listview= (ListView)findViewById(R.id.claimlistView);
         ArrayList<Claim> claims= ClaimListController.getClaimList().getClaims();
         final ArrayList<Claim> list = new ArrayList<Claim>(claims);      
-        //put names of claims as an arraylist of strings??
         final ArrayAdapter<Claim>claimAdapter = new ArrayAdapter<Claim>(this, android.R.layout.simple_list_item_1,list);
         listview.setAdapter(claimAdapter);
  
@@ -40,6 +39,14 @@ public class MainActivity extends Activity {
         		ArrayList<Claim> claims = ClaimListController.getClaimList().getClaims();
         		list.addAll(claims);
         		claimAdapter.notifyDataSetChanged();
+        	}
+        });
+        
+        listview.setOnItemClickListener(new OnItemClickListener(){
+        	@Override
+        	public void onItemClick(AdapterView<?>parent,View view, int position, long id){
+        		Intent intent= new Intent(MainActivity.this,ItemListActivity.class);
+        		startActivity(intent);
         	}
         });
     }
@@ -68,5 +75,4 @@ public class MainActivity extends Activity {
     	Intent intent = new Intent(MainActivity.this,NewClaimActivity.class);
     	startActivity(intent);
     }
-    
 }
