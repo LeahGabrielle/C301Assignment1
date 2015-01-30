@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
         	@Override
         	public void onItemClick(AdapterView<?>parent,View view, int position, long id){
         		Intent intent= new Intent(MainActivity.this,ItemListActivity.class);
+        		intent.putExtra("id",position);
         		startActivity(intent);
         	}
         });

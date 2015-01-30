@@ -63,12 +63,5 @@ public class ClaimList  implements Serializable{
 		getListeners().remove(l);
 	}
 	
-	public ArrayList<String> getClaimNames(){
-		ArrayList<String> claimnames = new ArrayList<String>();
-		for (Claim claim: this.claims){
-			claimnames.add(claim.getName());
-		}
-		return claimnames;
-	}
 	
 }

@@ -2,6 +2,7 @@ package ca.ualberta.cs.olexson_travel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Claim implements Serializable{
 	
@@ -10,17 +11,19 @@ public class Claim implements Serializable{
 	public String name;
 	public String description;
 	public String status;
-	//private Date startDate;
-	//private Date endDate;
+	private Date startDate;
+	private Date endDate;
 	
 	public Claim(){
 		super();
 	}
-	public Claim(String name, String description, String status) {
+	public Claim(String name, String description, String status, Date startDate, Date endDate) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.status = status;
+		this.endDate = endDate;
+		this.startDate = startDate;
 	}	
 	
 	public String getDescription() {
@@ -40,6 +43,19 @@ public class Claim implements Serializable{
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public Date getStartDate() {
+		return startDate;
+	}
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+	public Date getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 	public String toString(){
 		return getName();

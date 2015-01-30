@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ItemListActivity extends Activity {
@@ -13,6 +14,16 @@ public class ItemListActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.item_list);
+		int index = getIntent().getExtras().getInt("id");
+		TextView claimName = (TextView) findViewById(R.id.claim_itemlisttextView);
+		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
+		claimName.setText(cName);
+		TextView claimStatus = (TextView) findViewById(R.id.claimstatustextView);
+		String cStatus = ClaimListController.getClaimList().getClaims().get(index).getStatus();
+		claimStatus.setText(cStatus);
+		TextView claimD = (TextView) findViewById(R.id.claimdescriptioninfotextView);
+		String cDescription = ClaimListController.getClaimList().getClaims().get(index).getDescription();
+		claimD.setText(cDescription);
 	}
 
 	@Override

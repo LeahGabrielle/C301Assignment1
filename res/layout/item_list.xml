@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/daterangeStringtextView"
         android:layout_centerHorizontal="true"
-        android:text="Cost Currency*"
+        android:text="No Items in Claim"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
