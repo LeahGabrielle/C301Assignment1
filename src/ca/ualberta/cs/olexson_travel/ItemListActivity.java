@@ -1,5 +1,10 @@
 package ca.ualberta.cs.olexson_travel;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -24,6 +29,14 @@ public class ItemListActivity extends Activity {
 		TextView claimD = (TextView) findViewById(R.id.claimdescriptioninfotextView);
 		String cDescription = ClaimListController.getClaimList().getClaims().get(index).getDescription();
 		claimD.setText(cDescription);
+		
+		TextView claimDates = (TextView) findViewById(R.id.daterangeStringtextView);
+		Date start = ClaimListController.getClaimList().getClaims().get(index).getStartDate();
+		Date end = ClaimListController.getClaimList().getClaims().get(index).getEndDate();
+		DateFormat format = new SimpleDateFormat("MM/dd/yyyy",Locale.CANADA);
+		String cStart = format.format(start);
+		String cEnd = format.format(end);
+		claimDates.setText(cStart+"-"+cEnd);
 	}
 
 	@Override
