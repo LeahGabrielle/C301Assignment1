@@ -10,31 +10,15 @@
     tools:context="ca.ualberta.cs.olexson_travel.ItemListActivity" >
 
     <TextView
-        android:id="@+id/claim_itemlisttextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Claim*"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/daterangeStringtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/claim_itemlisttextView"
         android:layout_toStartOf="@+id/claim_itemlisttextView"
         android:text="Date Range*"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/claimstatustextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/daterangeStringtextView"
-        android:layout_alignBottom="@+id/daterangeStringtextView"
-        android:layout_toEndOf="@+id/claim_itemlisttextView"
-        android:text="Status*"
+        android:gravity="center"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
@@ -52,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/daterangeStringtextView"
         android:layout_centerHorizontal="true"
-        android:text="No Items in Claim"
+        android:text="No Items In Claim"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -93,5 +77,26 @@
         android:layout_toRightOf="@+id/claim_editbutton"
         android:onClick="newItem"
         android:text="@string/new_item" />
+
+    <TextView
+        android:id="@+id/claim_itemlisttextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/claimdescriptioninfotextView"
+        android:text="Claim*"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/claimstatustextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/claim_itemlisttextView"
+        android:layout_alignBottom="@+id/claim_itemlisttextView"
+        android:layout_alignLeft="@+id/emailbutton"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/claim_itemlisttextView"
+        android:text="Status*"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
