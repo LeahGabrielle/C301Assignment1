@@ -8,12 +8,15 @@ import java.util.Locale;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-//import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -50,6 +53,30 @@ public class ItemListActivity extends Activity {
         		Intent intent= new Intent(ItemListActivity.this,ExpenseItemsActivity.class);
         		intent.putExtra("id",position);
         		startActivity(intent);
+        	}
+        });
+        
+        listview.setOnItemLongClickListener(new OnItemLongClickListener(){
+        	@Override
+        	public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id){
+        		AlertDialog.Builder adb = new AlertDialog.Builder(ItemListActivity.this);
+        		adb.setMessage("Delete "+list.get(position).toString()+"?");
+        		adb.setCancelable(true);
+        		final int finalPosition = position;
+        		adb.setPositiveButton("Delete", new OnClickListener(){
+        			@Override
+        			public void onClick(DialogInterface dialog, int which){
+        				Item item = list.get(finalPosition);
+        				ItemController.getItemList().deleteItem(item);
+        			}
+        		});
+        		adb.setNegativeButton("Cancel",new OnClickListener(){
+        			@Override
+        			public void onClick(DialogInterface dialog, int which){
+        			}
+        		});
+        		adb.show();
+        		return false;
         	}
         });
         

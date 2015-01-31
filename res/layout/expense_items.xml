@@ -28,10 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/item_costcurrencytextView"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_marginBottom="80dp"
-        android:text="@string/description"
         android:gravity="center"
+        android:text="@string/description"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -39,31 +40,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/descriptionitemtextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignStart="@+id/edititembutton"
         android:layout_marginBottom="56dp"
-        android:text="@string/category"
         android:gravity="center"
+        android:text="@string/category"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/ItemstextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:text="Expense Item*"
         android:gravity="center"
+        android:text="Expense Item*"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/item_datetextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/ItemstextView"
-        android:layout_centerHorizontal="true"
-        android:text="Date*"
         android:gravity="center"
+        android:text="Date*"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
