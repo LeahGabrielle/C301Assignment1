@@ -111,4 +111,9 @@ public class ItemListActivity extends Activity {
     	Intent intent = new Intent(ItemListActivity.this,NewItemActivity.class);
     	startActivity(intent);
     }
+    
+//    public void email(View view){
+//    	Intent emailIntent = new Intent(Intent.ACTION_SEND);
+//    	
+//    }
 }
