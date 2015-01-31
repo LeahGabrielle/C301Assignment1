@@ -57,7 +57,8 @@ public class NewClaimActivity extends Activity {
 		Date startdate = format.parse(editstart.getText().toString());
 		Date enddate = format.parse(editend.getText().toString());
 		
-		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),editstatus.getText().toString(), startdate, enddate);
+		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),
+				editstatus.getText().toString(), startdate, enddate);
 		c.addClaim(claim);
 	}
 }

@@ -1,8 +1,13 @@
 package ca.ualberta.cs.olexson_travel;
 
-import java.sql.Date;
+import java.io.Serializable;
+import java.util.Date;
 
-public class Item {
+
+public class Item implements Serializable{
+
+	private static final long serialVersionUID = 4276436818531151760L;
+	
 	private String name;
 	private String description;
 	private String category;
@@ -50,6 +55,24 @@ public class Item {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
+	public String toString(){
+		return getName();
+	}
+	public boolean equals(Object compareItem) {
+		if (compareItem != null && compareItem.getClass()==this.getClass()) {
+			return this.equals((Item)compareItem);
+		} else {
+			return false;
+		}
+	}
+	public boolean equals(Item compareItem) {
+		if(compareItem==null) {
+			return false;
+		}
+		return getName().equals(compareItem.getName());
+	}
+	public int hashCode() {
+		return ("Item:"+getName()).hashCode();
+	}
 	
 }
