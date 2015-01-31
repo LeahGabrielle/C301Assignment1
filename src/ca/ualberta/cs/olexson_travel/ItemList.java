@@ -1,9 +1,13 @@
 package ca.ualberta.cs.olexson_travel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ItemList {
-	ArrayList <Item> items;
+public class ItemList implements Serializable{
+
+	private static final long serialVersionUID = 3670169367651080280L;
+	protected ArrayList <Item> items=null;
+
 	protected transient ArrayList<Listener> listeners = null;
 	
 	public ItemList(ArrayList<Item> items) {
@@ -16,12 +20,20 @@ public class ItemList {
 		listeners = new ArrayList<Listener>();
 		items = new ArrayList<Item>();
 	}
+	
+	public ArrayList<Item> getItems() {
+		return items;
+	}
+	public void setItems(ArrayList<Item> items) {
+		this.items = items;
+	}
+	
 	//add by date??
 	//add an item to the list of items
-	public ArrayList <Item> addItem(Item item){
+	public void addItem(Item item){
 		this.items.add(item);
 		notifyListeners();
-		return this.items;
+		//return this.items;
 	}
 	//delete an item from the list of items
 	public ArrayList<Item> deleteItem(Item item){
@@ -41,4 +53,12 @@ public class ItemList {
 		}
 		return listeners;
 	}
+	public void addListener(Listener l){
+		getListeners().add(l);
+	}
+	
+	public void removeListener(Listener l){
+		getListeners().remove(l);
+	}
+	
 }

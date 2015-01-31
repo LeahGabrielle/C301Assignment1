@@ -28,5 +28,6 @@
     <string name="date_range">Date Range</string>
     <string name="to">to</string>
     <string name="title_activity_new_item">NewItemActivity</string>
+    <string name="title_activity_expense_items">ExpenseItemsActivity</string>
 
 </resources>

@@ -10,6 +10,8 @@ import java.util.Locale;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,9 +29,22 @@ public class NewItemActivity extends Activity {
 		getMenuInflater().inflate(R.menu.new_item, menu);
 		return true;
 	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
-	public void addItemAction() throws ParseException{
+	public void addItemAction(View view) throws ParseException{
 		Toast.makeText(this,"adding an Item",Toast.LENGTH_SHORT).show();
+		ItemController c = new ItemController();
 		EditText editname=(EditText) findViewById(R.id.itemname_editText);
 		EditText editdescription=(EditText) findViewById(R.id.itemdescription_editText);
 		EditText editcategory=(EditText) findViewById(R.id.categoryeditText);
@@ -46,7 +61,7 @@ public class NewItemActivity extends Activity {
 		
 		Item item = new Item(editname.getText().toString(),editdescription.getText().toString(),
 				editcategory.getText().toString(), date, amtcur);
-		//itemcontroller.addItem(item);
+		c.addItem(item);
 		
 	}
 }

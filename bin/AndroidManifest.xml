@@ -34,6 +34,10 @@
             android:name="ca.ualberta.cs.olexson_travel.NewItemActivity"
             android:label="@string/title_activity_new_item" >
         </activity>
+        <activity
+            android:name="ca.ualberta.cs.olexson_travel.ExpenseItemsActivity"
+            android:label="@string/title_activity_expense_items" >
+        </activity>
     </application>
 
 </manifest>

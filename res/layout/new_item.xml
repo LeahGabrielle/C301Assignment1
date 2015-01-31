@@ -90,7 +90,7 @@
         android:layout_alignEnd="@+id/itemdescription_textView"
         android:layout_below="@+id/itemamounttextView"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal|numberSigned" />
 
     <EditText
         android:id="@+id/itemcurrencyeditText"
@@ -117,6 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:onClick="addItemAction"
         android:text="@string/done" />
 
     <TextView

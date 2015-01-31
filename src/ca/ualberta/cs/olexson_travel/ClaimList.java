@@ -36,7 +36,7 @@ public class ClaimList  implements Serializable{
 		return listeners;
 	}
 	
-	//Claims should be ordered by date (here?)
+	//Claims should be ordered by date
 	//add a claim to the list of claims
 	public void addClaim(Claim claim){
 		this.claims.add(claim);
