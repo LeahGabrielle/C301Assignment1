@@ -1,5 +1,6 @@
 package ca.ualberta.cs.olexson_travel;
 
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -41,6 +42,13 @@ public class ItemListActivity extends Activity {
         	@Override
         	public void update(){
         		list.clear();
+        		TextView claimamt = (TextView) findViewById(R.id.costcurrency_alltextView);
+        		String actext = new String();
+        		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
+        		for (AmountCurrency amtcurfinal:amount){
+        			actext = actext+"\n"+amtcurfinal.getAmount().toString()+" "+amtcurfinal.getCurrency().toString();
+        		}
+        		claimamt.setText(actext);
         		ArrayList<Item> items = ItemController.getItemList().getItems();
         		list.addAll(items);
         		itemAdapter.notifyDataSetChanged();
@@ -79,53 +87,6 @@ public class ItemListActivity extends Activity {
         		return false;
         	}
         });
-        
-//		int index = getIntent().getExtras().getInt("id");
-//		TextView claimName = (TextView) findViewById(R.id.claim_itemlisttextView);
-//		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
-//		claimName.setText(cName);
-//		TextView claimStatus = (TextView) findViewById(R.id.claimstatustextView);
-//		String cStatus = ClaimListController.getClaimList().getClaims().get(index).getStatus();
-//		claimStatus.setText(cStatus);
-//		TextView claimD = (TextView) findViewById(R.id.claimdescriptioninfotextView);
-//		String cDescription = ClaimListController.getClaimList().getClaims().get(index).getDescription();
-//		claimD.setText(cDescription);
-//		
-//		TextView claimDates = (TextView) findViewById(R.id.daterangeStringtextView);
-//		Date start = ClaimListController.getClaimList().getClaims().get(index).getStartDate();
-//		Date end = ClaimListController.getClaimList().getClaims().get(index).getEndDate();
-//		DateFormat format = new SimpleDateFormat("MM/dd/yyyy",Locale.CANADA);
-//		String cStart = format.format(start);
-//		String cEnd = format.format(end);
-//		claimDates.setText(cStart+"-"+cEnd);
-		
-		//add up costs of all items
-		//Claim claim = ClaimListController.getClaimList().getClaims().get(index);
-		//for (Item item:claim.getItems()){
-			
-		//}
-//		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
-//		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
-//		for (Item item:itemslist){
-//			amount.add(item.getAmountcurrency());
-//		}
-//		if (amount.size()>1){
-//			for (int i=0;i<amount.size();i++){
-//				for (int j=1;j<amount.size()-1;j++){
-//					if (amount.get(i).getCurrency().equals(amount.get(j).getCurrency())){
-//						amount.get(i).setAmount(amount.get(i).getAmount().add(amount.get(j).getAmount()));
-//						amount.remove(amount.get(j));
-//					}
-//				}
-//			}
-//		}
-//		TextView claimamt = (TextView) findViewById(R.id.costcurrency_alltextView);
-//		String actext = new String();
-//		for (AmountCurrency amtcurfinal:amount){
-//			actext = actext+"\n"+amtcurfinal.getAmount().toString()+" "+amtcurfinal.getCurrency().toString();
-//		}
-//		claimamt.setText(actext);
-//		actext=null;
 	}
 	
 	@Override
@@ -151,28 +112,48 @@ public class ItemListActivity extends Activity {
 		String cEnd = format.format(end);
 		claimDates.setText(cStart+"-"+cEnd);
 		
+		
+		//TODO fix list of AmountCurrencies
 		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
 		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
+		amount.clear();
+		
 		for (Item item:itemslist){
 			amount.add(item.getAmountcurrency());
 		}
-		if (amount.size()>1){
-			for (int i=0;i<amount.size();i++){
-				for (int j=1;j<amount.size()-1;j++){
-					if (amount.get(i).getCurrency().equals(amount.get(j).getCurrency())){
-						amount.get(i).setAmount(amount.get(i).getAmount().add(amount.get(j).getAmount()));
-						amount.remove(amount.get(j));
-					}
-				}
+		ArrayList<AmountCurrency> totals = new ArrayList<AmountCurrency>();
+		totals.clear();
+		
+		int ind=0;
+		for (int j=0;j<amount.size();j++){
+			boolean state = false;
+			for (int i=0;i<totals.size();i++){
+				if (totals.get(i).getCurrency().equals(amount.get(j).getCurrency())){
+					state=true;
+					ind= i;
+					break;
+				}		
+			}
+			if (state==true){
+				BigDecimal value = totals.get(ind).getAmount();
+				BigDecimal value2 = amount.get(j).getAmount();
+				BigDecimal value3 = value.add(value2);
+				totals.add(new AmountCurrency(value3,totals.get(ind).getCurrency()));
+				totals.remove(ind);
+
+			}
+			else{
+				totals.add(amount.get(j));
 			}
 		}
+		
 		TextView claimamt = (TextView) findViewById(R.id.costcurrency_alltextView);
 		String actext = new String();
-		for (AmountCurrency amtcurfinal:amount){
+		for (AmountCurrency amtcurfinal:totals){
 			actext = actext+"\n"+amtcurfinal.getAmount().toString()+" "+amtcurfinal.getCurrency().toString();
 		}
 		claimamt.setText(actext);
-		actext=null;
+		actext="";
 	}
 
 	@Override
@@ -201,4 +182,6 @@ public class ItemListActivity extends Activity {
 //    	Intent emailIntent = new Intent(Intent.ACTION_SEND);
 //    	
 //    }
+    
+    
 }

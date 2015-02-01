@@ -46,6 +46,7 @@ public class EditClaim extends Activity {
 	
 	@Override
 	protected void onResume(){
+		super.onResume();
 		int index = getIntent().getExtras().getInt("id");
 		TextView claimName = (TextView) findViewById(R.id.editclaimnamefillText);
 		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
@@ -100,5 +101,11 @@ public class EditClaim extends Activity {
 		ClaimListController.getClaimList().deleteClaim(ClaimListController.getClaimList().getClaims().get(index));
 		//Intent intent = new Intent(EditClaim.this, ItemListActivity.class);
 		//startActivity(intent);
+		
+		editname.setText("");
+		editdescription.setText("");
+		editstatus.setText("");
+		editstart.setText("");
+		editend.setText("");
 	}
 }
