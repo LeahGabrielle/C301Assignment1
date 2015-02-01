@@ -29,5 +29,6 @@
     <string name="to">to</string>
     <string name="title_activity_new_item">NewItemActivity</string>
     <string name="title_activity_expense_items">ExpenseItemsActivity</string>
+    <string name="title_activity_edit_claim">EditClaim</string>
 
 </resources>

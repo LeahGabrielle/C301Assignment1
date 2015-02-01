@@ -112,6 +112,13 @@ public class ItemListActivity extends Activity {
     	startActivity(intent);
     }
     
+    public void editClaim(View view){
+    	Toast.makeText(this,"edit claim",Toast.LENGTH_SHORT).show();
+    	Intent intent = new Intent(ItemListActivity.this,EditClaim.class);
+    	int index = getIntent().getExtras().getInt("id");
+    	intent.putExtra("id", index);
+    	startActivity(intent);
+    }
 //    public void email(View view){
 //    	Intent emailIntent = new Intent(Intent.ACTION_SEND);
 //    	

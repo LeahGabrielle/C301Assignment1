@@ -66,6 +66,7 @@
         android:layout_alignBottom="@+id/newitem_button"
         android:layout_alignLeft="@+id/itemlistView"
         android:layout_alignParentStart="true"
+        android:onClick="editClaim"
         android:text="@string/edit_claim" />
 
     <Button
