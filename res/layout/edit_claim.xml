@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ca.ualberta.cs.olexson_travel.NewClaimActivity" >
+
+    <TextView
+        android:id="@+id/editclaimnametextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/claim_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editclaimnamefillText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editclaimnametextView"
+
+        android:ems="10" />
+           <requestFocus />
+
+    <TextView
+        android:id="@+id/editclaimdescriptiontextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editclaimnamefillText"
+        android:layout_marginTop="27dp"
+        android:text="@string/claim_description"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editclaimdescription_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editclaimdescriptiontextView"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+    </EditText>
+
+    <Button
+        android:id="@+id/editdoneclaimbutton"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="doneEditClaim"
+        android:text="@string/done" />
+
+    <TextView
+        android:id="@+id/editstatus_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editclaimdescription_editText"
+        android:layout_below="@+id/editclaimdescription_editText"
+        android:layout_marginTop="22dp"
+        android:text="@string/claim_status"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editstatus_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/editstatus_textView"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/editdaterangeStringtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editstatus_editText"
+        android:layout_below="@+id/editstatus_editText"
+        android:layout_marginTop="20dp"
+        android:text="@string/date_range"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editdaterange1editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editdoneclaimbutton"
+        android:layout_alignStart="@+id/editdoneclaimbutton"
+        android:layout_alignEnd="@+id/editclaimnametextView"
+        android:ems="10"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editdaterange2editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editdoneclaimbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/editclaimdescriptiontextView"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/edittotextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editdaterange1editText"
+        android:layout_alignBottom="@+id/editdaterange1editText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/to"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
