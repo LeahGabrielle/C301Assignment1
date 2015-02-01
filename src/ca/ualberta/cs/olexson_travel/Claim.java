@@ -7,7 +7,7 @@ import java.util.Date;
 public class Claim implements Serializable{
 	
 	private static final long serialVersionUID = -7556743916038416941L;
-	public ArrayList<ItemList> items;
+	public ArrayList<Item> items;
 	public String name;
 	public String description;
 	public String status;
@@ -26,6 +26,14 @@ public class Claim implements Serializable{
 		this.startDate = startDate;
 	}	
 	
+	
+	
+	public ArrayList<Item> getItems() {
+		return items;
+	}
+	public void setItems(ArrayList<Item> items) {
+		this.items = items;
+	}
 	public String getDescription() {
 		return description;
 	}

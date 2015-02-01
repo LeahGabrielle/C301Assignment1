@@ -9,6 +9,7 @@ import java.util.Locale;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -62,6 +63,7 @@ public class NewItemActivity extends Activity {
 		Item item = new Item(editname.getText().toString(),editdescription.getText().toString(),
 				editcategory.getText().toString(), date, amtcur);
 		c.addItem(item);
-		
+		Intent intent = new Intent(NewItemActivity.this, MainActivity.class);
+		startActivity(intent);
 	}
 }

@@ -98,6 +98,34 @@ public class ItemListActivity extends Activity {
 		String cStart = format.format(start);
 		String cEnd = format.format(end);
 		claimDates.setText(cStart+"-"+cEnd);
+		
+		//add up costs of all items
+		//Claim claim = ClaimListController.getClaimList().getClaims().get(index);
+		//for (Item item:claim.getItems()){
+			
+		//}
+		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
+		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
+		for (Item item:itemslist){
+			amount.add(item.getAmountcurrency());
+		}
+		if (amount.size()>1){
+			for (int i=0;i<amount.size();i++){
+				for (int j=1;j<amount.size()-1;j++){
+					if (amount.get(i).getCurrency().equals(amount.get(j).getCurrency())){
+						amount.get(i).setAmount(amount.get(i).getAmount().add(amount.get(j).getAmount()));
+						amount.remove(amount.get(j));
+					}
+				}
+			}
+		}
+		TextView claimamt = (TextView) findViewById(R.id.costcurrency_alltextView);
+		String actext = new String();
+		for (AmountCurrency amtcurfinal:amount){
+			actext = actext+"\n"+amtcurfinal.getAmount().toString()+" "+amtcurfinal.getCurrency().toString();
+		}
+		claimamt.setText(actext);
+		actext=null;
 	}
 
 	@Override
@@ -113,6 +141,9 @@ public class ItemListActivity extends Activity {
     }
     
     public void editClaim(View view){
+    	
+    	//TODO put in status condition
+    	
     	Toast.makeText(this,"edit claim",Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(ItemListActivity.this,EditClaim.class);
     	int index = getIntent().getExtras().getInt("id");
