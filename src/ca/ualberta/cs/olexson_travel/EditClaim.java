@@ -8,7 +8,7 @@ import java.util.Locale;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
+//import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
@@ -22,6 +22,30 @@ public class EditClaim extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.edit_claim);
 		
+//		int index = getIntent().getExtras().getInt("id");
+//		TextView claimName = (TextView) findViewById(R.id.editclaimnamefillText);
+//		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
+//		claimName.setText(cName);
+//		TextView claimStatus = (TextView) findViewById(R.id.editstatus_editText);
+//		String cStatus = ClaimListController.getClaimList().getClaims().get(index).getStatus();
+//		claimStatus.setText(cStatus);
+//		TextView claimD = (TextView) findViewById(R.id.editclaimdescription_editText);
+//		String cDescription = ClaimListController.getClaimList().getClaims().get(index).getDescription();
+//		claimD.setText(cDescription);
+//			
+//		TextView claimDate1 = (TextView) findViewById(R.id.editdaterange1editText);
+//		TextView claimDate2 = (TextView) findViewById(R.id.editdaterange2editText);
+//		Date start = ClaimListController.getClaimList().getClaims().get(index).getStartDate();
+//		Date end = ClaimListController.getClaimList().getClaims().get(index).getEndDate();
+//		DateFormat format = new SimpleDateFormat("MM/dd/yyyy",Locale.CANADA);
+//		String cStart = format.format(start);
+//		String cEnd = format.format(end);
+//		claimDate1.setText(cStart);
+//		claimDate2.setText(cEnd);
+	}
+	
+	@Override
+	protected void onResume(){
 		int index = getIntent().getExtras().getInt("id");
 		TextView claimName = (TextView) findViewById(R.id.editclaimnamefillText);
 		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
@@ -74,7 +98,7 @@ public class EditClaim extends Activity {
 		//delete unedited claim
 		int index = getIntent().getExtras().getInt("id");
 		ClaimListController.getClaimList().deleteClaim(ClaimListController.getClaimList().getClaims().get(index));
-		Intent intent = new Intent(EditClaim.this, MainActivity.class);
-		startActivity(intent);
+		//Intent intent = new Intent(EditClaim.this, ItemListActivity.class);
+		//startActivity(intent);
 	}
 }

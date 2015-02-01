@@ -80,6 +80,58 @@ public class ItemListActivity extends Activity {
         	}
         });
         
+//		int index = getIntent().getExtras().getInt("id");
+//		TextView claimName = (TextView) findViewById(R.id.claim_itemlisttextView);
+//		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
+//		claimName.setText(cName);
+//		TextView claimStatus = (TextView) findViewById(R.id.claimstatustextView);
+//		String cStatus = ClaimListController.getClaimList().getClaims().get(index).getStatus();
+//		claimStatus.setText(cStatus);
+//		TextView claimD = (TextView) findViewById(R.id.claimdescriptioninfotextView);
+//		String cDescription = ClaimListController.getClaimList().getClaims().get(index).getDescription();
+//		claimD.setText(cDescription);
+//		
+//		TextView claimDates = (TextView) findViewById(R.id.daterangeStringtextView);
+//		Date start = ClaimListController.getClaimList().getClaims().get(index).getStartDate();
+//		Date end = ClaimListController.getClaimList().getClaims().get(index).getEndDate();
+//		DateFormat format = new SimpleDateFormat("MM/dd/yyyy",Locale.CANADA);
+//		String cStart = format.format(start);
+//		String cEnd = format.format(end);
+//		claimDates.setText(cStart+"-"+cEnd);
+		
+		//add up costs of all items
+		//Claim claim = ClaimListController.getClaimList().getClaims().get(index);
+		//for (Item item:claim.getItems()){
+			
+		//}
+//		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
+//		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
+//		for (Item item:itemslist){
+//			amount.add(item.getAmountcurrency());
+//		}
+//		if (amount.size()>1){
+//			for (int i=0;i<amount.size();i++){
+//				for (int j=1;j<amount.size()-1;j++){
+//					if (amount.get(i).getCurrency().equals(amount.get(j).getCurrency())){
+//						amount.get(i).setAmount(amount.get(i).getAmount().add(amount.get(j).getAmount()));
+//						amount.remove(amount.get(j));
+//					}
+//				}
+//			}
+//		}
+//		TextView claimamt = (TextView) findViewById(R.id.costcurrency_alltextView);
+//		String actext = new String();
+//		for (AmountCurrency amtcurfinal:amount){
+//			actext = actext+"\n"+amtcurfinal.getAmount().toString()+" "+amtcurfinal.getCurrency().toString();
+//		}
+//		claimamt.setText(actext);
+//		actext=null;
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		
 		int index = getIntent().getExtras().getInt("id");
 		TextView claimName = (TextView) findViewById(R.id.claim_itemlisttextView);
 		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
@@ -99,11 +151,6 @@ public class ItemListActivity extends Activity {
 		String cEnd = format.format(end);
 		claimDates.setText(cStart+"-"+cEnd);
 		
-		//add up costs of all items
-		//Claim claim = ClaimListController.getClaimList().getClaims().get(index);
-		//for (Item item:claim.getItems()){
-			
-		//}
 		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
 		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
 		for (Item item:itemslist){

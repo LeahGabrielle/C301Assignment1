@@ -60,5 +60,12 @@ public class NewClaimActivity extends Activity {
 		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),
 				editstatus.getText().toString(), startdate, enddate);
 		c.addClaim(claim);
+		
+		editname.setText("");
+		editdescription.setText("");
+		editstatus.setText("");
+		editstart.setText("");
+		editend.setText("");
+		
 	}
 }
