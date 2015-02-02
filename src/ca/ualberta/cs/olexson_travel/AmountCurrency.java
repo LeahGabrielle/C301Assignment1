@@ -1,4 +1,4 @@
-    //Copyright (C) 2015 Leah Olexsonn
+    //Copyright (C) 2015 Leah Olexson
 
     //This program is free software; you can redistribute it and/or modify
     //it under the terms of the GNU General Public License as published by
