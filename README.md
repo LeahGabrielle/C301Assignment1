@@ -3,6 +3,7 @@
 travel expense tracking application for android
 
 Link to Video on DropBox: https://www.dropbox.com/s/i73bqqetto6ko7a/assignment1video.mp4?dl=0
+Link to Video Demo on archive.org: https://archive.org/details/C301Assignment1Video
 
 
 Used Student Picker code Controllers/Managers/Listeners: https://github.com/abramhindle/student-picker <br>
