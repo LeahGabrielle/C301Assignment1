@@ -102,6 +102,7 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
     public void newClaim(View view){
+    	//takes to NewClaimActivity to create a new claim
     	Toast.makeText(this,"new claim",Toast.LENGTH_SHORT).show();
     	Intent intent = new Intent(MainActivity.this,NewClaimActivity.class);
     	startActivity(intent);

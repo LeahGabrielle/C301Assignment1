@@ -28,6 +28,7 @@ public class EmailActivity extends Activity {
 	}
 
     public void emailfinal(View view){
+    	//doesn't work
     	
     	EditText email = (EditText) findViewById(R.id.emaileditText);
     	String sEmail = email.toString();

@@ -67,6 +67,7 @@ public class Claim implements Serializable{
 	}
 	
 	public String emailString(){
+		//formats all claim info into a string for emailing
 		String body = new String();
 		body= (this.name+"\n"+this.startDate.toString()+" - "+this.endDate.toString()
 		+"\n"+this.description+"\n"+this.status+"\n");
