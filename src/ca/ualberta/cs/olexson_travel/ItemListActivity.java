@@ -42,13 +42,48 @@ public class ItemListActivity extends Activity {
         	@Override
         	public void update(){
         		list.clear();
+        		
+        		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
+        		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
+        		amount.clear();
+        		
+        		for (Item item:itemslist){
+        			amount.add(item.getAmountcurrency());
+        		}
+        		ArrayList<AmountCurrency> totals = new ArrayList<AmountCurrency>();
+        		totals.clear();
+        		
+        		int ind=0;
+        		for (int j=0;j<amount.size();j++){
+        			boolean state = false;
+        			for (int i=0;i<totals.size();i++){
+        				if (totals.get(i).getCurrency().equals(amount.get(j).getCurrency())){
+        					state=true;
+        					ind= i;
+        					break;
+        				}		
+        			}
+        			if (state==true){
+        				BigDecimal value = totals.get(ind).getAmount();
+        				BigDecimal value2 = amount.get(j).getAmount();
+        				BigDecimal value3 = value.add(value2);
+        				totals.add(new AmountCurrency(value3,totals.get(ind).getCurrency()));
+        				totals.remove(ind);
+
+        			}
+        			else{
+        				totals.add(amount.get(j));
+        			}
+        		}
+        		
         		TextView claimamt = (TextView) findViewById(R.id.costcurrency_alltextView);
         		String actext = new String();
-        		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
-        		for (AmountCurrency amtcurfinal:amount){
+        		for (AmountCurrency amtcurfinal:totals){
         			actext = actext+"\n"+amtcurfinal.getAmount().toString()+" "+amtcurfinal.getCurrency().toString();
         		}
         		claimamt.setText(actext);
+        		
+        		
         		ArrayList<Item> items = ItemController.getItemList().getItems();
         		list.addAll(items);
         		itemAdapter.notifyDataSetChanged();
@@ -113,7 +148,6 @@ public class ItemListActivity extends Activity {
 		claimDates.setText(cStart+"-"+cEnd);
 		
 		
-		//TODO fix list of AmountCurrencies
 		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
 		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
 		amount.clear();
@@ -153,7 +187,6 @@ public class ItemListActivity extends Activity {
 			actext = actext+"\n"+amtcurfinal.getAmount().toString()+" "+amtcurfinal.getCurrency().toString();
 		}
 		claimamt.setText(actext);
-		actext="";
 	}
 
 	@Override
