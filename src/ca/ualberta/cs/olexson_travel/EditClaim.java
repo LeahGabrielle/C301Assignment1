@@ -22,26 +22,6 @@ public class EditClaim extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.edit_claim);
 		
-//		int index = getIntent().getExtras().getInt("id");
-//		TextView claimName = (TextView) findViewById(R.id.editclaimnamefillText);
-//		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
-//		claimName.setText(cName);
-//		TextView claimStatus = (TextView) findViewById(R.id.editstatus_editText);
-//		String cStatus = ClaimListController.getClaimList().getClaims().get(index).getStatus();
-//		claimStatus.setText(cStatus);
-//		TextView claimD = (TextView) findViewById(R.id.editclaimdescription_editText);
-//		String cDescription = ClaimListController.getClaimList().getClaims().get(index).getDescription();
-//		claimD.setText(cDescription);
-//			
-//		TextView claimDate1 = (TextView) findViewById(R.id.editdaterange1editText);
-//		TextView claimDate2 = (TextView) findViewById(R.id.editdaterange2editText);
-//		Date start = ClaimListController.getClaimList().getClaims().get(index).getStartDate();
-//		Date end = ClaimListController.getClaimList().getClaims().get(index).getEndDate();
-//		DateFormat format = new SimpleDateFormat("MM/dd/yyyy",Locale.CANADA);
-//		String cStart = format.format(start);
-//		String cEnd = format.format(end);
-//		claimDate1.setText(cStart);
-//		claimDate2.setText(cEnd);
 	}
 	
 	@Override
@@ -75,7 +55,7 @@ public class EditClaim extends Activity {
 		getMenuInflater().inflate(R.menu.edit_claim, menu);
 		return true;
 	}
-
+	
 	public void doneEditClaim(View view)throws ParseException{
 		
 		Toast.makeText(this,"editing claim",Toast.LENGTH_SHORT).show();
@@ -99,8 +79,6 @@ public class EditClaim extends Activity {
 		//delete unedited claim
 		int index = getIntent().getExtras().getInt("id");
 		ClaimListController.getClaimList().deleteClaim(ClaimListController.getClaimList().getClaims().get(index));
-		//Intent intent = new Intent(EditClaim.this, ItemListActivity.class);
-		//startActivity(intent);
 		
 		editname.setText("");
 		editdescription.setText("");

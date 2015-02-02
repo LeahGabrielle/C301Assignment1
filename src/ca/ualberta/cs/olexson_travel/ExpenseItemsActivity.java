@@ -16,7 +16,7 @@ public class ExpenseItemsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.expense_items);
-		
+		//sets info about Item
 		int index = getIntent().getExtras().getInt("id");
 		TextView itemName = (TextView) findViewById(R.id.ItemstextView);
 		String iName = ItemController.getItemList().getItems().get(index).getName();

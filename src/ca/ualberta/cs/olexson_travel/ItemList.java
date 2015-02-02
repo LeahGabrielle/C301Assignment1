@@ -28,8 +28,7 @@ public class ItemList implements Serializable{
 		this.items = items;
 	}
 	
-	//add by date??
-	//add an item to the list of items
+	//add an item to the list of items, not ordered by date
 	public void addItem(Item item){
 		this.items.add(item);
 		notifyListeners();

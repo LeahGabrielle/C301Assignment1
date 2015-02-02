@@ -46,6 +46,7 @@ public class NewItemActivity extends Activity {
 	public void addItemAction(View view) throws ParseException{
 		Toast.makeText(this,"adding an Item",Toast.LENGTH_SHORT).show();
 		ItemController c = new ItemController();
+		//uses given info to create a new Item object
 		EditText editname=(EditText) findViewById(R.id.itemname_editText);
 		EditText editdescription=(EditText) findViewById(R.id.itemdescription_editText);
 		EditText editcategory=(EditText) findViewById(R.id.categoryeditText);
@@ -63,14 +64,12 @@ public class NewItemActivity extends Activity {
 		Item item = new Item(editname.getText().toString(),editdescription.getText().toString(),
 				editcategory.getText().toString(), date, amtcur);
 		c.addItem(item);
-		
+		//sets fields to empty so can put in another item
 		editname.setText("");
 		editdescription.setText("");
 		editcategory.setText("");
 		editamount.setText("");
 		editcurrency.setText("");
 		editdate.setText("");
-		//Intent intent = new Intent(NewItemActivity.this, MainActivity.class);
-		//startActivity(intent);
 	}
 }

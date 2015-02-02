@@ -42,7 +42,7 @@ public class ItemListActivity extends Activity {
         	@Override
         	public void update(){
         		list.clear();
-        		
+        		//updates currencies after deleting
         		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
         		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
         		amount.clear();
@@ -127,7 +127,7 @@ public class ItemListActivity extends Activity {
 	@Override
 	protected void onResume(){
 		super.onResume();
-		
+		//sets claim info
 		int index = getIntent().getExtras().getInt("id");
 		TextView claimName = (TextView) findViewById(R.id.claim_itemlisttextView);
 		String cName = ClaimListController.getClaimList().getClaims().get(index).getName();
@@ -147,7 +147,7 @@ public class ItemListActivity extends Activity {
 		String cEnd = format.format(end);
 		claimDates.setText(cStart+"-"+cEnd);
 		
-		
+		//calculates total currency
 		ArrayList<Item> itemslist = ItemController.getItemList().getItems();
 		ArrayList<AmountCurrency> amount = new ArrayList<AmountCurrency>();
 		amount.clear();

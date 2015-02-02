@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class AmountCurrency implements Serializable{
-	
+	//this class combines Amount and Currency into one for Item
 	private static final long serialVersionUID = 6124147205526464963L;
 	
 	public BigDecimal amount;

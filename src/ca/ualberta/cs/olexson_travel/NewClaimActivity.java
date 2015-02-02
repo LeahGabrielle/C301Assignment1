@@ -44,6 +44,7 @@ public class NewClaimActivity extends Activity {
 	}
 	//adds claim to ClaimList
 	public void addClaimAction(View view) throws ParseException{
+		//gets claim info to make a claim with the given info
 		Toast.makeText(this,"adding a claim",Toast.LENGTH_SHORT).show();
 		ClaimListController c = new ClaimListController();
 		EditText editname=(EditText) findViewById(R.id.claimname_editfillText);
@@ -60,7 +61,7 @@ public class NewClaimActivity extends Activity {
 		Claim claim=new Claim(editname.getText().toString(),editdescription.getText().toString(),
 				editstatus.getText().toString(), startdate, enddate);
 		c.addClaim(claim);
-		
+		//sets fields back to empty so they are ready to add another claim
 		editname.setText("");
 		editdescription.setText("");
 		editstatus.setText("");

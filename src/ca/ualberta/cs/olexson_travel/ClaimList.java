@@ -22,7 +22,6 @@ public class ClaimList  implements Serializable{
 	}
 	
 	public ArrayList<Claim> getClaims() {
-		//this.claims=new ArrayList<Claim>();
 		return claims;
 	}
 	public void setClaims(ArrayList<Claim> claims) {
@@ -36,7 +35,7 @@ public class ClaimList  implements Serializable{
 		return listeners;
 	}
 	
-	//Claims should be ordered by date
+	//Claims should be ordered by date, but are not
 	//add a claim to the list of claims
 	public void addClaim(Claim claim){
 		this.claims.add(claim);
