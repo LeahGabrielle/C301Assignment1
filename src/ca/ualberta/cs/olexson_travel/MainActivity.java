@@ -31,7 +31,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 //centering text in xml
-//http://stackoverflow.com/questions/432037/how-do-i-center-text-horizontally-and-vertically-in-a-textview-in-android
+//http://stackoverflow.com/questions/432037/how-do-i-center-text-horizontally-and-vertically-in-a-textview-in-android Jan 30, 2015
 
 public class MainActivity extends Activity {
 	
