@@ -178,10 +178,10 @@ public class ItemListActivity extends Activity {
     	intent.putExtra("id", index);
     	startActivity(intent);
     }
-//    public void email(View view){
-//    	Intent emailIntent = new Intent(Intent.ACTION_SEND);
-//    	
-//    }
-    
-    
+    public void email(View view){
+    	Intent intent = new Intent(ItemListActivity.this,EmailActivity.class);
+    	int position = getIntent().getExtras().getInt("id");
+		intent.putExtra("id",position);
+    	startActivity(intent);
+    }
 }

@@ -65,6 +65,13 @@ public class Claim implements Serializable{
 	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}
+	
+	public String emailString(){
+		String body = new String();
+		body= (this.name+"\n"+this.startDate.toString()+" - "+this.endDate.toString()
+		+"\n"+this.description+"\n"+this.status+"\n");
+		return body;
+	}
 	public String toString(){
 		return getName();
 	}
